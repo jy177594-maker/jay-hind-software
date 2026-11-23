@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="hi" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>जय हिंद सॉफ्टवेयर (Jay Hind Software) | All-in-One Social Media Automation Suite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'],
+            hindi: ['"Noto Sans Devanagari"', '"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            obsidian: '#050814',
+            indigoGlow: '#6366F1',
+            emeraldGlow: '#10B981',
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #050814;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Subtle Tech Grid Background */
+    .cyber-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+    }
+
+    /* Glassmorphism Cards */
+    .glass-card {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(99, 102, 241, 0.45);
+      box-shadow: 0 12px 40px -8px rgba(99, 102, 241, 0.25), 0 0 20px rgba(16, 185, 129, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .glass-nav {
+      background: rgba(5, 8, 20, 0.82);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(99, 102, 241, 0.18);
+    }
+
+    /* Neon Text & Button Glow */
+    .text-gradient {
+      background: linear-gradient(135deg, #818CF8 0%, #34D399 50%, #38BDF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #4F46E5 0%, #6366F1 50%, #10B981 100%);
+      background-size: 200% auto;
+      transition: 0.4s;
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+    }
+    .btn-primary:hover {
+      background-position: right center;
+      box-shadow: 0 6px 28px rgba(16, 185, 129, 0.45);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050814;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E293B;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4F46E5;
+    }
+
+    /* Step Indicator Transition */
+    .step-active {
+      border-color: #10B981;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34D399;
+    }
+  </style>
+</head>
+<body class="cyber-grid min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+  <!-- Ambient Neon Glow Orbs -->
+  <div class="fixed top-[-120px] left-[-100px] w-[420px] h-[420px] rounded-full bg-indigo-600/20 blur-[130px] pointer-events-none z-0"></div>
+  <div class="fixed bottom-[-120px] right-[-100px] w-[450px] h-[450px] rounded-full bg-emerald-500/15 blur-[140px] pointer-events-none z-0"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="glass-nav sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3.5 flex items-center justify-between gap-4">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-600 to-emerald-500 p-[2px] shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-[#070B19] rounded-[10px] flex items-center justify-center">
+            <i data-lucide="cpu" class="w-6 h-6 text-emerald-400"></i>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-lg sm:text-xl font-extrabold tracking-tight text-white">जय हिंद <span class="text-gradient">सॉफ्टवेयर</span></span>
+            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">v4.2 PRO</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium tracking-wide">JAY HIND YADAV ENTERPRISE</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#software-catalog" class="hover:text-white transition-colors">सभी सॉफ्टवेयर</a>
+        <a href="#how-it-works" class="hover:text-white transition-colors">कैसे खरीदें?</a>
+        <a href="#live-demo-section" class="hover:text-white transition-colors">लाइव डेमो</a>
+        <a href="#custom-request" class="hover:text-white transition-colors">कस्टम बदलाव</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <button onclick="openCheckoutModal('insta-pro')" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-indigo-500/15 text-indigo-300 border border-indigo-500/30 hover:bg-indigo-500/25 transition-all">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span>तुरंत खरीदें</span>
+        </button>
+        <a href="https://wa.me/919890093797?text=नमस्ते%20जय%20हिंद%20सॉफ्टवेयर!%20मुझे%20सोशल%20मीडिया%20सॉफ्टवेयर%20के%20बारे%20में%20जानकारी%20चाहिए।" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/25 transition-all">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-slate-950"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative z-10 pt-12 pb-14 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs sm:text-sm font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>भारत का नंबर #1 सोशल मीडिया ऑटोमेशन और ग्रोथ सॉफ्टवेयर हब</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.18] mb-6">
+        आपके बिज़नेस के लिए <br class="hidden sm:block" />
+        <span class="text-gradient">All-in-One सोशल मीडिया सॉफ्टवेयर</span>
+      </h1>
+
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+        Instagram, WhatsApp, YouTube, Facebook, Telegram और SMM Panel के पावरफुल ऑटोमेशन सॉफ्टवेयर। 
+        अपना <span class="text-emerald-400 font-semibold">यूजर आईडी डालें</span>, <span class="text-indigo-300 font-semibold">BharatPe QR</span> से पेमेंट करें और तुरंत लाइसेंस प्राप्त करें।
+      </p>
+
+      <!-- Hero CTA Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+        <a href="#software-catalog" class="btn-primary px-7 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base flex items-center gap-2.5">
+          <i data-lucide="layers" class="w-5 h-5"></i>
+          <span>सॉफ्टवेयर लिस्ट देखें</span>
+        </a>
+        <a href="https://wa.me/919890093797?text=नमस्ते%20जय%20हिंद%20जी,%20मुझे%20जय%20हिंद%20सॉफ्टवेयर%20के%20बारे%20में%20बात%20करनी%20है।" target="_blank" rel="noopener noreferrer"
+           class="px-7 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-emerald-400 border border-emerald-500/35 font-bold text-sm sm:text-base flex items-center gap-2.5 transition-all">
+          <i data-lucide="phone-call" class="w-5 h-5"></i>
+          <span>WhatsApp: 9890093797</span>
+        </a>
+      </div>
+
+      <!-- Trust Metrics Bar -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-5 max-w-3xl mx-auto">
+        <div class="glass-card rounded-2xl p-4 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white">9+</div>
+          <div class="text-xs text-slate-400 mt-1">प्रो सॉफ्टवेयर टूल्स</div>
+        </div>
+        <div class="glass-card rounded-2xl p-4 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">100%</div>
+          <div class="text-xs text-slate-400 mt-1">इंस्टेंट डिजिटल डिलीवरी</div>
+        </div>
+        <div class="glass-card rounded-2xl p-4 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold text-indigo-400">UPI / QR</div>
+          <div class="text-xs text-slate-400 mt-1">BharatPe वेरिफाइड पेमेंट</div>
+        </div>
+        <div class="glass-card rounded-2xl p-4 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold text-sky-400">24/7</div>
+          <div class="text-xs text-slate-400 mt-1">WhatsApp लाइव सपोर्ट</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Step Purchase Flow Guide -->
+  <section id="how-it-works" class="relative z-10 py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="glass-card rounded-3xl p-6 sm:p-8 border-indigo-500/20">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">आसान 3-स्टेप प्रक्रिया</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">सॉफ्टवेयर खरीदने की सुपर-फास्ट प्रक्रिया</h2>
+        </div>
+        <span class="text-xs text-slate-400 bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-800">
+          भुगतान के बाद ऑटोमैटिक लाइसेंस Key जनरेट होती है
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="bg-slate-900/75 border border-slate-800 rounded-2xl p-5 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 font-extrabold flex items-center justify-center shrink-0">1</div>
+          <div>
+            <h3 class="font-bold text-white text-base">यूजर नेम / आईडी डालें</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">सॉफ्टवेयर चुनें और अपने Instagram, Facebook, YouTube या WhatsApp का यूजर नेम दर्ज करें।</p>
+          </div>
+        </div>
+        <div class="bg-slate-900/75 border border-slate-800 rounded-2xl p-5 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-extrabold flex items-center justify-center shrink-0">2</div>
+          <div>
+            <h3 class="font-bold text-white text-base">BharatPe QR से पेमेंट करें</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">कन्फर्म करते ही <strong>JAY HIND YADAV</strong> का BharatPe QR कोड और राशि दिखेगी। स्कैन करके पेमेंट करें।</p>
+          </div>
+        </div>
+        <div class="bg-slate-900/75 border border-slate-800 rounded-2xl p-5 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-sky-500/20 border border-sky-500/40 text-sky-300 font-extrabold flex items-center justify-center shrink-0">3</div>
+          <div>
+            <h3 class="font-bold text-white text-base">UTR वेरीफाई और डाउनलोड</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">12-अंकों का UTR नंबर डालकर वेरीफाई करें और तुरंत सॉफ्टवेयर डाउनलोड व WhatsApp रसीद पाएं।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Software Catalog Section -->
+  <section id="software-catalog" class="relative z-10 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">सॉफ्टवेयर कैटलॉग</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">सभी सोशल मीडिया सॉफ्टवेयर</h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">किसी भी सॉफ्टवेयर पर <strong>"सॉफ्टवेयर खरीदें"</strong> दबाएं या <strong>"लाइव डेमो"</strong> टेस्ट करें।</p>
+      </div>
+
+      <!-- Search Input -->
+      <div class="relative w-full lg:w-80">
+        <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+        <input type="text" id="searchInput" oninput="filterSoftware()" placeholder="सॉफ्टवेयर खोजें (जैसे Instagram, SMM)..."
+               class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500 transition-colors" />
+      </div>
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-7 no-scrollbar" id="categoryTabs">
+      <button onclick="setCategory('all')" data-cat="all" class="cat-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 whitespace-nowrap transition-all">
+        सभी (All 9)
+      </button>
+      <button onclick="setCategory('instagram')" data-cat="instagram" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900/80 text-slate-300 border border-slate-800 hover:border-indigo-500/40 whitespace-nowrap transition-all">
+        Instagram
+      </button>
+      <button onclick="setCategory('whatsapp')" data-cat="whatsapp" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900/80 text-slate-300 border border-slate-800 hover:border-emerald-500/40 whitespace-nowrap transition-all">
+        WhatsApp
+      </button>
+      <button onclick="setCategory('youtube')" data-cat="youtube" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900/80 text-slate-300 border border-slate-800 hover:border-rose-500/40 whitespace-nowrap transition-all">
+        YouTube
+      </button>
+      <button onclick="setCategory('facebook')" data-cat="facebook" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900/80 text-slate-300 border border-slate-800 hover:border-blue-500/40 whitespace-nowrap transition-all">
+        Facebook
+      </button>
+      <button onclick="setCategory('telegram')" data-cat="telegram" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900/80 text-slate-300 border border-slate-800 hover:border-sky-500/40 whitespace-nowrap transition-all">
+        Telegram
+      </button>
+      <button onclick="setCategory('smm')" data-cat="smm" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900/80 text-slate-300 border border-slate-800 hover:border-purple-500/40 whitespace-nowrap transition-all">
+        SMM Reseller
+      </button>
+    </div>
+
+    <!-- Software Cards Grid -->
+    <div id="softwareGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Populated dynamically via JS -->
+    </div>
+  </section>
+
+  <!-- Interactive Live Console Demo Simulator -->
+  <section id="live-demo-section" class="relative z-10 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="glass-card rounded-3xl p-6 sm:p-8 border-emerald-500/25">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> लाइव सॉफ्टवेयर सिमुलेटर
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">खरीदने से पहले लाइव डेमो चलाकर देखें</h2>
+        </div>
+        <div class="flex items-center gap-2">
+          <select id="demoSoftwareSelect" onchange="resetConsole()" class="px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white font-semibold focus:outline-none focus:border-indigo-500">
+            <!-- Populated by JS -->
+          </select>
+          <button onclick="runLiveDemo()" class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm flex items-center gap-2 transition-all shadow-lg shadow-emerald-500/20">
+            <i data-lucide="play" class="w-4 h-4 fill-slate-950"></i>
+            <span>टेस्ट रन करें</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Terminal Window -->
+      <div class="bg-[#03050C] border border-slate-800 rounded-2xl overflow-hidden shadow-inner">
+        <div class="px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            <span class="text-xs text-slate-400 font-mono ml-2">jayhind-software-engine v4.2 — live-console</span>
+          </div>
+          <span id="demoStatusBadge" class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300">READY</span>
+        </div>
+        <div id="demoConsoleOutput" class="p-5 font-mono text-xs sm:text-sm text-slate-300 space-y-2 min-h-[190px] max-h-[260px] overflow-y-auto">
+          <p class="text-emerald-400">[SYSTEM] जय हिंद सॉफ्टवेयर क्लाउड इंजन तैयार है।</p>
+          <p class="text-slate-400">[INFO] ऊपर से कोई भी सॉफ्टवेयर चुनें और "टेस्ट रन करें" बटन दबाएं...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Software / Changing Request Section -->
+  <section id="custom-request" class="relative z-10 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="glass-card rounded-3xl p-6 sm:p-10 border-indigo-500/25 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-6 space-y-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 text-xs font-bold">
+          कस्टम सॉफ्टवेयर और बदलाव (Custom Changing)
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+          क्या आपको अपने बिज़नेस के लिए नया सॉफ्टवेयर या कोई बदलाव चाहिए?
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          यदि आप अपने नाम/ब्रांड का खुद का SMM पैनल, व्हाट्सएप बॉट, या किसी भी सोशल मीडिया टूल में बदलाव (Changing) करवाना चाहते हैं, तो अपनी रिक्वेस्ट सीधे हमारे WhatsApp पर भेजें।
+        </p>
+        <div class="pt-2 flex flex-wrap gap-4 text-xs sm:text-sm text-slate-300">
+          <div class="flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+            <span>व्हाइट-लेबल ब्रांडिंग</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+            <span>फास्ट डिलीवरी</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+            <span>फुल सोर्स कोड सपोर्ट</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 bg-slate-900/80 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1.5">आपका नाम / कंपनी का नाम</label>
+          <input type="text" id="reqName" placeholder="उदा. राहुल शर्मा" class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-indigo-500" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1.5">किस सॉफ्टवेयर में बदलाव या नया टूल चाहिए?</label>
+          <textarea id="reqDetails" rows="3" placeholder="अपनी जरूरत विस्तार से लिखें..." class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+        <button onclick="sendCustomWhatsApp()" class="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm flex items-center justify-center gap-2 transition-all shadow-lg shadow-emerald-500/25">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          <span>WhatsApp (9890093797) पर रिक्वेस्ट भेजें</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 mt-auto border-t border-slate-800/80 bg-[#03050D]/90 py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-400">
+      <div class="flex items-center gap-2.5">
+        <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+        <span>© 2026 <strong class="text-white">जय हिंद सॉफ्टवेयर (Jay Hind Yadav Enterprise)</strong>. सर्वाधिकार सुरक्षित।</span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="https://wa.me/919890093797" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-semibold flex items-center gap-1.5">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>WhatsApp सपोर्ट: 9890093797</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Bottom-Right WhatsApp Button -->
+  <a href="https://wa.me/919890093797?text=नमस्ते%20जय%20हिंद%20सॉफ्टवेयर!%20मुझे%20सॉफ्टवेयर%20खरीदना%20है।" target="_blank" rel="noopener noreferrer"
+     title="WhatsApp पर संपर्क करें: 9890093797"
+     class="fixed bottom-5 right-5 z-40 flex items-center gap-2.5 px-4 py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs sm:text-sm shadow-2xl shadow-emerald-500/40 transition-transform hover:scale-105">
+    <i data-lucide="message-circle" class="w-5 h-5 fill-slate-950"></i>
+    <span class="hidden sm:inline">WhatsApp: 9890093797</span>
+  </a>
+
+  <!-- ===================================================================== -->
+  <!-- 2-STEP CHECKOUT & BHARATPE QR VERIFICATION MODAL                      -->
+  <!-- ===================================================================== -->
+  <div id="checkoutModal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md overflow-y-auto">
+    <div class="relative w-full max-w-xl glass-card bg-[#090E21]/95 border border-indigo-500/35 rounded-3xl shadow-2xl overflow-hidden my-auto">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-4 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center text-indigo-300">
+            <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-extrabold text-white">सॉफ्टवेयर चेकआउट पोर्टल</h3>
+            <p class="text-[11px] text-slate-400">जय हिंद यादव एंटरप्राइज • इंस्टेंट एक्टिवेशन</p>
+          </div>
+        </div>
+        <button onclick="closeCheckoutModal()" class="p-2 rounded-xl bg-slate-800/80 hover:bg-rose-500/20 text-slate-300 hover:text-rose-400 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Progress Step Bar -->
+      <div class="px-6 py-3 bg-slate-950/70 border-b border-slate-800/80 grid grid-cols-3 gap-2 text-center text-[11px] sm:text-xs font-bold">
+        <div id="stepBadge1" class="step-active py-1.5 px-2 rounded-lg border border-slate-800 transition-all">1. यूजर आईडी</div>
+        <div id="stepBadge2" class="py-1.5 px-2 rounded-lg border border-slate-800 text-slate-400 transition-all">2. BharatPe QR</div>
+        <div id="stepBadge3" class="py-1.5 px-2 rounded-lg border border-slate-800 text-slate-400 transition-all">3. सॉफ्टवेयर प्राप्त</div>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 space-y-5 max-h-[82vh] overflow-y-auto">
+
+        <!-- Software Selector Dropdown (Always visible in Step 1 & 2) -->
+        <div id="softwareSelectorBox" class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
+          <label class="block text-xs font-semibold text-slate-400 mb-1.5">चयनित सॉफ्टवेयर (बदलने के लिए क्लिक करें):</label>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <select id="modalSoftwareSelect" onchange="onModalSoftwareChange()" class="w-full sm:w-2/3 px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white font-bold focus:outline-none focus:border-indigo-500">
+              <!-- Populated dynamically -->
+            </select>
+            <div class="flex items-center justify-between sm:justify-end gap-2 bg-emerald-500/10 border border-emerald-500/30 px-4 py-2 rounded-xl">
+              <span class="text-xs text-slate-300">कुल शुल्क:</span>
+              <span id="modalPriceDisplay" class="text-lg font-extrabold text-emerald-400">₹1,499</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- =============================================================== -->
+        <!-- STEP 1: DYNAMIC PLATFORM USER ID INPUT (QR HIDDEN INITIALLY)    -->
+        <!-- =============================================================== -->
+        <div id="checkoutStep1" class="space-y-4">
+          <div class="bg-indigo-500/10 border border-indigo-500/30 rounded-2xl p-4">
+            <div class="flex items-center gap-2 text-indigo-300 font-bold text-sm mb-2">
+              <i data-lucide="user-check" class="w-4 h-4 text-emerald-400"></i>
+              <span id="dynamicPromptLabel">Instagram का यूजर आईडी डालें और सॉफ्टवेयर खरीदें</span>
+            </div>
+            <input type="text" id="platformUserInput" placeholder="@your_instagram_username"
+                   class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-indigo-500/50 text-white text-sm sm:text-base font-semibold placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            <p id="platformHelperText" class="text-[11px] text-slate-400 mt-2">
+              सॉफ्टवेयर लाइसेंस सीधे आपके इस यूजर आईडी पर एक्टिवेट किया जाएगा।
+            </p>
+            <p id="step1Error" class="hidden text-xs font-bold text-rose-400 mt-2 flex items-center gap-1.5">
+              <i data-lucide="alert-circle" class="w-4 h-4"></i>
+              <span>कृपया आगे बढ़ने से पहले अपना सही यूजर नेम / आईडी दर्ज करें!</span>
+            </p>
+          </div>
+
+          <button onclick="proceedToQrStep()" class="w-full btn-primary py-3.5 rounded-xl text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 shadow-xl">
+            <span>यूजर आईडी कन्फर्म करें और QR कोड देखें</span>
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- =============================================================== -->
+        <!-- STEP 2: BHARATPE QR CODE & 12-DIGIT UTR VERIFICATION            -->
+        <!-- =============================================================== -->
+        <div id="checkoutStep2" class="hidden space-y-5">
+          <!-- Confirmed User Summary Bar -->
+          <div class="flex items-center justify-between bg-slate-900/90 border border-emerald-500/30 rounded-xl px-4 py-2.5">
+            <div class="text-xs sm:text-sm">
+              <span class="text-slate-400">यूजर आईडी:</span>
+              <strong id="confirmedUserBadge" class="text-emerald-400 ml-1">@username</strong>
+            </div>
+            <button onclick="backToStep1()" class="text-xs font-bold text-indigo-400 hover:text-indigo-300 underline">
+              बदलें (Edit)
+            </button>
+          </div>
+
+          <!-- BharatPe Official Styled QR Card -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-xl border-2 border-slate-200 text-slate-900 max-w-sm mx-auto">
+            <!-- BharatPe Top Header -->
+            <div class="bg-gradient-to-r from-[#E86C52] to-[#D9534F] py-2.5 px-4 text-center text-white">
+              <p class="text-[10px] font-semibold tracking-wider uppercase opacity-90">Hai Yakeen</p>
+              <div class="flex items-center justify-center gap-1.5 font-extrabold text-lg tracking-tight">
+                <span class="w-5 h-5 rounded-full bg-white text-[#00A896] flex items-center justify-center text-xs font-black">=</span>
+                <span>BharatPe</span>
+              </div>
+            </div>
+
+            <!-- Merchant Name & Dynamic Amount -->
+            <div class="p-4 text-center bg-white">
+              <p class="font-extrabold text-base tracking-wide text-slate-900">JAY HIND YADAV</p>
+              <div class="mt-1 inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-extrabold">
+                <span>पेमेंट राशि:</span>
+                <span id="qrAmountBadge" class="text-sm">₹1,499</span>
+              </div>
+
+              <!-- Dynamic Scannable UPI QR Code -->
+              <div class="my-3 p-2.5 bg-white border-2 border-slate-100 rounded-2xl inline-block shadow-sm">
+                <img id="bharatPeQrImage" src="" alt="BharatPe QR Code - JAY HIND YADAV" class="w-44 h-44 sm:w-48 sm:h-48 mx-auto object-contain" />
+              </div>
+
+              <!-- UPI ID Copy Box -->
+              <div class="flex items-center justify-between gap-2 bg-slate-100 border border-slate-200 rounded-xl px-3 py-2 text-left">
+                <span id="upiIdText" class="text-[11px] sm:text-xs font-mono font-bold text-slate-700 truncate">BHARATPE2U0V0N1G6C28231@unitype</span>
+                <button onclick="copyUpiId()" class="px-2.5 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-[11px] font-bold shrink-0 transition-colors">
+                  Copy
+                </button>
+              </div>
+              <p id="copyToast" class="hidden text-[11px] font-bold text-emerald-600 mt-1">UPI ID कॉपी हो गया!</p>
+            </div>
+
+            <!-- BharatPe Bottom Teal Strip -->
+            <div class="bg-[#0F766E] py-2 px-4 text-center text-white text-[11px] font-semibold">
+              BHIM UPI • PhonePe • Google Pay • Paytm से स्कैन करें
+            </div>
+          </div>
+
+          <!-- 12-Digit UTR Verification Input -->
+          <div class="bg-slate-900/90 border border-slate-700 rounded-2xl p-4 space-y-3">
+            <label class="block text-xs sm:text-sm font-bold text-white">
+              पेमेंट करने के बाद 12-अंकों का UTR / Ref नंबर डालें:
+            </label>
+            <input type="text" id="utrInput" maxlength="12" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                   placeholder="उदा. 632849102847 (12 अंक)"
+                   class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-emerald-500/40 text-white font-mono text-base tracking-widest placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            <p id="utrError" class="hidden text-xs font-bold text-rose-400 flex items-center gap-1.5">
+              <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+              <span>कृपया सही 12-अंकों का UTR नंबर दर्ज करें!</span>
+            </p>
+
+            <button onclick="verifyPaymentAndDeliver()" id="verifyBtn" class="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/30 transition-all">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+              <span>पेमेंट वेरीफाई करें और सॉफ्टवेयर प्राप्त करें</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- =============================================================== -->
+        <!-- STEP 3: INSTANT SOFTWARE LICENSE & DOWNLOAD DELIVERY            -->
+        <!-- =============================================================== -->
+        <div id="checkoutStep3" class="hidden space-y-5 text-center">
+          <div class="w-16 h-16 rounded-full bg-emerald-500/20 border-2 border-emerald-400 flex items-center justify-center mx-auto text-emerald-400 animate-bounce">
+            <i data-lucide="check-circle-2" class="w-9 h-9"></i>
+          </div>
+
+          <div>
+            <span class="px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-extrabold">PAYMENT VERIFIED ✓</span>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-2">बधाई हो! आपका सॉफ्टवेयर तैयार है</h3>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">आपका लाइसेंस <strong id="deliveredUserId" class="text-emerald-400"></strong> के लिए एक्टिवेट कर दिया गया है।</p>
+          </div>
+
+          <!-- License Receipt Card -->
+          <div class="bg-slate-950 border border-indigo-500/40 rounded-2xl p-4 text-left space-y-2.5 text-xs sm:text-sm">
+            <div class="flex justify-between">
+              <span class="text-slate-400">सॉफ्टवेयर:</span>
+              <strong id="deliveredSoftwareName" class="text-white">InstaGrowth Pro</strong>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">भुगतान राशि:</span>
+              <strong id="deliveredAmount" class="text-emerald-400">₹1,499</strong>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">वेरीफाइड UTR:</span>
+              <span id="deliveredUtr" class="font-mono text-slate-200">123456789012</span>
+            </div>
+            <div class="pt-2 border-t border-slate-800 flex items-center justify-between gap-2">
+              <span class="text-slate-400">License Key:</span>
+              <span id="generatedLicenseKey" class="font-mono font-extrabold text-indigo-300 bg-indigo-500/15 px-2.5 py-1 rounded-lg border border-indigo-500/30">JHS-9890-PRO-2026</span>
+            </div>
+          </div>
+
+          <!-- Download & WhatsApp Receipt Buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button onclick="downloadSoftwarePackage()" class="btn-primary py-3.5 px-4 rounded-xl text-white font-extrabold text-sm flex items-center justify-center gap-2">
+              <i data-lucide="download" class="w-5 h-5"></i>
+              <span>सॉफ्टवेयर डाउनलोड करें</span>
+            </button>
+            <a id="whatsappReceiptLink" href="#" target="_blank" rel="noopener noreferrer"
+               class="py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="message-circle" class="w-5 h-5 fill-slate-950"></i>
+              <span>WhatsApp पर रसीद भेजें</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Application Logic -->
+  <script>
+    // Complete Social Media Software Catalog Data
+    const softwareList = [
+      {
+        id: 'insta-pro',
+        category: 'instagram',
+        name: 'InstaGrowth & Auto-Reels Pro',
+        badge: 'सबसे लोकप्रिय',
+        price: 1499,
+        icon: 'instagram',
+        color: 'from-pink-500 to-purple-600',
+        promptLabel: 'Instagram का यूजर आईडी डालें और सॉफ्टवेयर खरीदें',
+        placeholder: 'उदा. @jayhind_official',
+        helper: 'अपना Instagram यूजरनेम (@username) डालें जिस पर ऑटोमेशन चलाना है।',
+        desc: 'ऑटो फॉलो/अनफॉलो, रील्स शेड्यूलर, ऑटो DM रिप्लाई और हैशटैग एनालिटिक्स टूल।',
+        features: ['ऑटोमैटिक स्टोरी व रील्स व्यूअर', 'स्मार्ट टारगेटेड ऑडियंस ग्रोथ', 'एंटी-बैन सेफ क्लाउड मोड']
+      },
+      {
+        id: 'wa-bulk',
+        category: 'whatsapp',
+        name: 'WhatsApp Bulk Blaster CRM',
+        badge: 'बिज़नेस स्पेशल',
+        price: 1299,
+        icon: 'message-square',
+        color: 'from-emerald-500 to-teal-600',
+        promptLabel: 'WhatsApp नंबर डालें और सॉफ्टवेयर खरीदें',
+        placeholder: 'उदा. 9890093797',
+        helper: 'अपना 10-अंकों का WhatsApp बिज़नेस नंबर दर्ज करें।',
+        desc: 'बिना नंबर सेव किए हजारों ग्राहकों को एक क्लिक में फोटो, वीडियो और PDF मैसेज भेजें।',
+        features: ['ऑटो चैटबॉट और कीवर्ड रिप्लाई', 'ग्रुप कॉन्टैक्ट एक्सट्रैक्टर', 'मल्टी-अकाउंट रोटेशन सपोर्ट']
+      },
+      {
+        id: 'yt-booster',
+        category: 'youtube',
+        name: 'YouTube Studio & SEO Booster',
+        badge: 'क्रिएटर चॉइस',
+        price: 1799,
+        icon: 'youtube',
+        color: 'from-rose-500 to-red-600',
+        promptLabel: 'YouTube चैनल लिंक या @Handle डालें और सॉफ्टवेयर खरीदें',
+        placeholder: 'उदा. @JayHindTech या चैनल URL',
+        helper: 'अपने YouTube चैनल का हैंडल या लिंक दर्ज करें।',
+        desc: 'वायरल टैग जनरेटर, रैंक ट्रैकर, ऑटो कमेंट पिन और व्यूज एनालिटिक्स सॉफ्टवेयर।',
+        features: ['हाई-रैंकिंग SEO कीवर्ड खोजें', 'ऑटो थंबनेल A/B टेस्टिंग', 'लाइव सब्सक्राइबर और वॉच-टाइम बूस्ट']
+      },
+      {
+        id: 'fb-lead',
+        category: 'facebook',
+        name: 'Facebook Auto-Poster & Lead Pro',
+        badge: 'हाई ROI',
+        price: 1199,
+        icon: 'facebook',
+        color: 'from-blue-500 to-indigo-600',
+        promptLabel: 'Facebook का यूजर नेम डालें और सॉफ्टवेयर खरीदें',
+        placeholder: 'उदा. facebook.com/jayhind या यूजरनेम',
+        helper: 'अपना Facebook प्रोफाइल या पेज यूजर नेम दर्ज करें।',
+        desc: 'सैकड़ों Facebook ग्रुप्स और पेजों में एक साथ ऑटो-पोस्टिंग और लीड एक्सट्रैक्शन टूल।',
+        features: ['अनलिमिटेड ग्रुप ऑटो-शेयरिंग', 'पेज इनबॉक्स ऑटो-रिस्पॉन्डर', 'मार्केटप्लेस लिस्टिंग बॉट']
+      },
+      {
+        id: 'tg-adder',
+        category: 'telegram',
+        name: 'Telegram Member Adder & Scraper',
+        badge: 'फास्ट ग्रोथ',
+        price: 1399,
+        icon: 'send',
+        color: 'from-sky-400 to-blue-600',
+        promptLabel: 'Telegram यूजरनेम (@username) डालें और सॉफ्टवेयर खरीदें',
+        placeholder: 'उदा. @jayhind_tg',
+        helper: 'अपना Telegram यूजरनेम या चैनल लिंक दर्ज करें।',
+        desc: 'किसी भी पब्लिक ग्रुप से एक्टिव मेंबर्स निकालें और अपने Telegram चैनल/ग्रुप में जोड़ें।',
+        features: ['एक्टिव यूजर फिल्टर (Last Seen)', 'ऑटो बल्क डायरेक्ट मैसेजिंग', 'मल्टी-सेशन अकाउंट मैनेजर']
+      },
+      {
+        id: 'smm-panel',
+        category: 'smm',
+        name: 'Complete SMM Reseller Panel Script',
+        badge: 'फुल बिज़नेस',
+        price: 2999,
+        icon: 'server',
+        color: 'from-indigo-500 via-purple-500 to-pink-500',
+        promptLabel: 'अपना डोमेन या पैनल यूजर आईडी डालें और सॉफ्टवेयर खरीदें',
+        placeholder: 'उदा. xsmm.in या Admin ID',
+        helper: 'जिस डोमेन या आईडी पर SMM पैनल सेटअप करना है वह लिखें।',
+        desc: 'खुद की SMM वेबसाइट शुरू करें! API इंटीग्रेशन, UPI पेमेंट गेटवे और ऑटो ऑर्डर प्रोसेसिंग के साथ।',
+        features: ['ऑटो API प्रोवाइडर कनेक्शन', 'UPI / QR पेमेंट गेटवे रेडी', 'अनलिमिटेड रीसेलर और यूजर मैनेजमेंट']
+      },
+      {
+        id: 'insta-scraper',
+        category: 'instagram',
+        name: 'Instagram Email & Phone Extractor',
+        badge: 'लीड जनरेशन',
+        price: 999,
+        icon: 'database',
+        color: 'from-fuchsia-500 to-purple-600',
+        promptLabel: 'Instagram का यूजर आईडी डालें और सॉफ्टवेयर खरीदें',
+        placeholder: 'उदा. @your_insta_id',
+        helper: 'लाइसेंस एक्टिवेशन के लिए Instagram यूजर आईडी डालें।',
+        desc: 'किसी भी हैशटैग या फॉलोअर्स लिस्ट से पब्लिक ईमेल और मोबाइल नंबर Excel में डाउनलोड करें।',
+        features: ['1-क्लिक CSV / Excel एक्सपोर्ट', 'बिज़नेस अकाउंट फिल्टर', 'जीरो अकाउंट रिस्क']
+      },
+      {
+        id: 'wa-api-bot',
+        category: 'whatsapp',
+        name: 'WhatsApp Official API Cloud Bot',
+        badge: 'एंटरप्राइज',
+        price: 1999,
+        icon: 'bot',
+        color: 'from-green-500 to-emerald-700',
+        promptLabel: 'WhatsApp बिज़नेस नंबर डालें और सॉफ्टवेयर खरीदें',
+        placeholder: 'उदा. +91 9890093797',
+        helper: 'अपना WhatsApp API नंबर दर्ज करें।',
+        desc: 'ऑटोमैटिक ऑर्डर कन्फर्मेशन, पेमेंट रिमाइंडर और 24/7 AI कस्टमर सपोर्ट बॉट।',
+        features: ['वेबहुक और पेमेंट अलर्ट', 'कस्टम बटन और कैटलॉग मेनू', 'ग्रीन-टिक वेरिफिकेशन गाइड']
+      },
+      {
+        id: 'all-combo',
+        category: 'smm',
+        name: 'जय हिंद ऑल-इन-वन मास्टर बंडल (All 8 Tools)',
+        badge: 'मेगा बचत 60% OFF',
+        price: 4999,
+        icon: 'crown',
+        color: 'from-amber-400 via-orange-500 to-rose-500',
+        promptLabel: 'अपना मुख्य यूजर आईडी या मोबाइल नंबर डालें और बंडल खरीदें',
+        placeholder: 'उदा. @jayhind या 9890093797',
+        helper: 'इस बंडल में सभी 8 सोशल मीडिया सॉफ्टवेयर लाइफटाइम लाइसेंस के साथ मिलते हैं।',
+        desc: 'Instagram, WhatsApp, YouTube, Facebook, Telegram और SMM के सभी 8 प्रीमियम सॉफ्टवेयर एक साथ।',
+        features: ['सभी 8 सॉफ्टवेयर का फुल एक्सेस', 'लाइफटाइम फ्री अपडेट्स', 'VIP डायरेक्ट WhatsApp सपोर्ट']
+      }
+    ];
+
+    let activeCategory = 'all';
+    let selectedSoftware = softwareList[0];
+    let verifiedUtrGlobal = '';
+    let generatedKeyGlobal = '';
+
+    // Render Software Cards
+    function renderSoftwareCards() {
+      const grid = document.getElementById('softwareGrid');
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+
+      const filtered = softwareList.filter(sw => {
+        const matchesCat = activeCategory === 'all' || sw.category === activeCategory;
+        const matchesSearch = sw.name.toLowerCase().includes(query) ||
+                              sw.desc.toLowerCase().includes(query) ||
+                              sw.category.toLowerCase().includes(query);
+        return matchesCat && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full glass-card rounded-2xl p-10 text-center">
+            <p class="text-slate-300 font-bold text-lg">कोई सॉफ्टवेयर नहीं मिला</p>
+            <p class="text-slate-400 text-sm mt-1">कृपया दूसरा कीवर्ड खोजें या "सभी (All)" पर क्लिक करें।</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(sw => `
+        <div class="glass-card rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden group">
+          <!-- Top Accent Line -->
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${sw.color}"></div>
+
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br ${sw.color} p-[1px] shadow-lg">
+                <div class="w-full h-full bg-[#080D1F] rounded-[15px] flex items-center justify-center text-white">
+                  <i data-lucide="${sw.icon}" class="w-6 h-6"></i>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
+                ${sw.badge}
+              </span>
+            </div>
+
+            <h3 class="text-lg sm:text-xl font-extrabold text-white group-hover:text-indigo-300 transition-colors">
+              ${sw.name}
+            </h3>
+            <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+              ${sw.desc}
+            </p>
+
+            <ul class="mt-4 space-y-2 border-t border-slate-800/80 pt-4">
+              ${sw.features.map(f => `
+                <li class="flex items-center gap-2 text-xs text-slate-300">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                  <span>${f}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800/80">
+            <div class="flex items-baseline justify-between mb-4">
+              <div>
+                <span class="text-xs text-slate-400 block">लाइफटाइम लाइसेंस</span>
+                <span class="text-2xl font-extrabold text-white">₹${sw.price.toLocaleString('en-IN')}</span>
+              </div>
+              <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-lg border border-emerald-500/20">
+                इंस्टेंट डिलीवरी
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="triggerCardDemo('${sw.id}')" class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold flex items-center justify-center gap-1.5 transition-all">
+                <i data-lucide="terminal" class="w-3.5 h-3.5 text-indigo-400"></i>
+                <span>लाइव डेमो</span>
+              </button>
+              <button onclick="openCheckoutModal('${sw.id}')" class="btn-primary py-2.5 px-3 rounded-xl text-white text-xs font-extrabold flex items-center justify-center gap-1.5">
+                <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+                <span>सॉफ्टवेयर खरीदें</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    function setCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.className = 'cat-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 whitespace-nowrap transition-all';
+        } else {
+          btn.className = 'cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900/80 text-slate-300 border border-slate-800 hover:border-indigo-500/40 whitespace-nowrap transition-all';
+        }
+      });
+      renderSoftwareCards();
+    }
+
+    function filterSoftware() {
+      renderSoftwareCards();
+    }
+
+    // Populate Dropdowns
+    function populateSelectDropdowns() {
+      const modalSelect = document.getElementById('modalSoftwareSelect');
+      const demoSelect = document.getElementById('demoSoftwareSelect');
+
+      const optionsHtml = softwareList.map(sw =>
+        `<option value="${sw.id}">${sw.name} — ₹${sw.price.toLocaleString('en-IN')}</option>`
+      ).join('');
+
+      modalSelect.innerHTML = optionsHtml;
+      demoSelect.innerHTML = optionsHtml;
+    }
+
+    // =====================================================================
+    // 2-STEP CHECKOUT MODAL LOGIC
+    // =====================================================================
+    function openCheckoutModal(softwareId) {
+      selectedSoftware = softwareList.find(s => s.id === softwareId) || softwareList[0];
+      document.getElementById('modalSoftwareSelect').value = selectedSoftware.id;
+      updateModalForSelectedSoftware();
+
+      // Reset to Step 1 (User ID first, QR hidden)
+      resetToStep1();
+
+      const modal = document.getElementById('checkoutModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById('checkoutModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function onModalSoftwareChange() {
+      const newId = document.getElementById('modalSoftwareSelect').value;
+      selectedSoftware = softwareList.find(s => s.id === newId) || softwareList[0];
+      updateModalForSelectedSoftware();
+      // If user was on Step 2, update QR amount dynamically too
+      if (!document.getElementById('checkoutStep2').classList.contains('hidden')) {
+        generateDynamicBharatPeQr();
+      }
+    }
+
+    function updateModalForSelectedSoftware() {
+      document.getElementById('modalPriceDisplay').textContent = `₹${selectedSoftware.price.toLocaleString('en-IN')}`;
+      document.getElementById('dynamicPromptLabel').textContent = selectedSoftware.promptLabel;
+      document.getElementById('platformUserInput').placeholder = selectedSoftware.placeholder;
+      document.getElementById('platformHelperText').textContent = selectedSoftware.helper;
+      document.getElementById('step1Error').classList.add('hidden');
+    }
+
+    function resetToStep1() {
+      document.getElementById('softwareSelectorBox').classList.remove('hidden');
+      document.getElementById('checkoutStep1').classList.remove('hidden');
+      document.getElementById('checkoutStep2').classList.add('hidden');
+      document.getElementById('checkoutStep3').classList.add('hidden');
+
+      document.getElementById('stepBadge1').className = 'step-active py-1.5 px-2 rounded-lg border transition-all';
+      document.getElementById('stepBadge2').className = 'py-1.5 px-2 rounded-lg border border-slate-800 text-slate-400 transition-all';
+      document.getElementById('stepBadge3').className = 'py-1.5 px-2 rounded-lg border border-slate-800 text-slate-400 transition-all';
+
+      document.getElementById('utrInput').value = '';
+      document.getElementById('utrError').classList.add('hidden');
+    }
+
+    function backToStep1() {
+      resetToStep1();
+    }
+
+    // Step 1 -> Step 2 (Reveal BharatPe QR Code ONLY after User ID is entered & clicked)
+    function proceedToQrStep() {
+      const userIdVal = document.getElementById('platformUserInput').value.trim();
+      const errorEl = document.getElementById('step1Error');
+
+      if (!userIdVal || userIdVal.length < 2) {
+        errorEl.classList.remove('hidden');
+        document.getElementById('platformUserInput').focus();
+        return;
+      }
+
+      errorEl.classList.add('hidden');
+      document.getElementById('confirmedUserBadge').textContent = userIdVal;
+
+      // Generate Dynamic BharatPe QR with exact amount
+      generateDynamicBharatPeQr();
+
+      // Switch UI from Step 1 to Step 2
+      document.getElementById('checkoutStep1').classList.add('hidden');
+      document.getElementById('checkoutStep2').classList.remove('hidden');
+
+      document.getElementById('stepBadge1').className = 'py-1.5 px-2 rounded-lg border border-emerald-500/40 bg-emerald-500/10 text-emerald-300 transition-all';
+      document.getElementById('stepBadge2').className = 'step-active py-1.5 px-2 rounded-lg border transition-all';
+      lucide.createIcons();
+    }
+
+    function generateDynamicBharatPeQr() {
+      const amount = selectedSoftware.price;
+      const userIdVal = document.getElementById('platformUserInput').value.trim();
+      document.getElementById('qrAmountBadge').textContent = `₹${amount.toLocaleString('en-IN')}`;
+
+      const upiUri = `upi://pay?pa=BHARATPE2U0V0N1G6C28231@unitype&pn=JAY%20HIND%20YADAV&am=${amount}&cu=INR&tn=${encodeURIComponent(selectedSoftware.id + '-' + userIdVal)}`;
+      const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=6&data=${encodeURIComponent(upiUri)}`;
+      document.getElementById('bharatPeQrImage').src = qrApiUrl;
+    }
+
+    function copyUpiId() {
+      const upiText = document.getElementById('upiIdText').textContent;
+      navigator.clipboard.writeText(upiText);
+      const toast = document.getElementById('copyToast');
+      toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 2500);
+    }
+
+    // Step 2 -> Step 3 (Verify 12-Digit UTR and Deliver Software)
+    function verifyPaymentAndDeliver() {
+      const utrVal = document.getElementById('utrInput').value.trim();
+      const utrError = document.getElementById('utrError');
+
+      if (!/^\d{12}$/.test(utrVal)) {
+        utrError.classList.remove('hidden');
+        document.getElementById('utrInput').focus();
+        return;
+      }
+
+      utrError.classList.add('hidden');
+      verifiedUtrGlobal = utrVal;
+      const userIdVal = document.getElementById('platformUserInput').value.trim();
+
+      // Generate Unique License Key
+      const randomPart = Math.floor(1000 + Math.random() * 9000);
+      generatedKeyGlobal = `JHS-${selectedSoftware.category.toUpperCase()}-${randomPart}-2026`;
+
+      // Populate Delivery Receipt
+      document.getElementById('deliveredUserId').textContent = userIdVal;
+      document.getElementById('deliveredSoftwareName').textContent = selectedSoftware.name;
+      document.getElementById('deliveredAmount').textContent = `₹${selectedSoftware.price.toLocaleString('en-IN')}`;
+      document.getElementById('deliveredUtr').textContent = verifiedUtrGlobal;
+      document.getElementById('generatedLicenseKey').textContent = generatedKeyGlobal;
+
+      // Build WhatsApp Receipt Link to 9890093797
+      const waMsg = `नमस्ते जय हिंद सॉफ्टवेयर! मैंने सॉफ्टवेयर खरीदा है:\n` +
+                    `• सॉफ्टवेयर: ${selectedSoftware.name}\n` +
+                    `• यूजर आईडी: ${userIdVal}\n` +
+                    `• राशि: ₹${selectedSoftware.price}\n` +
+                    `• BharatPe UTR: ${verifiedUtrGlobal}\n` +
+                    `• License Key: ${generatedKeyGlobal}`;
+      document.getElementById('whatsappReceiptLink').href = `https://wa.me/919890093797?text=${encodeURIComponent(waMsg)}`;
+
+      // Switch to Step 3
+      document.getElementById('softwareSelectorBox').classList.add('hidden');
+      document.getElementById('checkoutStep2').classList.add('hidden');
+      document.getElementById('checkoutStep3').classList.remove('hidden');
+
+      document.getElementById('stepBadge2').className = 'py-1.5 px-2 rounded-lg border border-emerald-500/40 bg-emerald-500/10 text-emerald-300 transition-all';
+      document.getElementById('stepBadge3').className = 'step-active py-1.5 px-2 rounded-lg border transition-all';
+      lucide.createIcons();
+    }
+
+    // Download Software License & Setup File
+    function downloadSoftwarePackage() {
+      const userIdVal = document.getElementById('platformUserInput').value.trim();
+      const fileContent =
+`====================================================================
+   जय हिंद सॉफ्टवेयर (JAY HIND SOFTWARE) - OFFICIAL LICENSE PACKAGE
+   Jay Hind Yadav Enterprise | WhatsApp Support: +91 9890093797
+====================================================================
+
+सॉफ्टवेयर का नाम : ${selectedSoftware.name}
+रजिस्टर्ड यूजर ID  : ${userIdVal}
+भुगतान राशि        : ₹${selectedSoftware.price} (Verified via BharatPe UPI)
+UTR रेफरेंस नंबर  : ${verifiedUtrGlobal}
+एक्टिव License Key : ${generatedKeyGlobal}
+स्टेटस             : ACTIVE (LIFETIME VALIDITY)
+
+--------------------------------------------------------------------
+इंस्टॉलेशन निर्देश (Setup Guide):
+1. सॉफ्टवेयर डैशबोर्ड पर लॉगिन करें और ऊपर दी गई License Key पेस्ट करें।
+2. अपना यूजर आईडी (${userIdVal}) कन्फर्म करें।
+3. किसी भी तकनीकी सहायता के लिए WhatsApp करें: 9890093797
+====================================================================`;
+
+      const blob = new Blob([fileContent], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${selectedSoftware.id}-License-JayHindSoftware.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    // Live Demo Console Simulator
+    function triggerCardDemo(softwareId) {
+      document.getElementById('demoSoftwareSelect').value = softwareId;
+      document.getElementById('live-demo-section').scrollIntoView({ behavior: 'smooth' });
+      runLiveDemo();
+    }
+
+    function resetConsole() {
+      const out = document.getElementById('demoConsoleOutput');
+      const sw = softwareList.find(s => s.id === document.getElementById('demoSoftwareSelect').value);
+      out.innerHTML = `<p class="text-emerald-400">[READY] ${sw.name} मॉड्यूल लोड हो गया है। "टेस्ट रन करें" पर क्लिक करें।</p>`;
+      document.getElementById('demoStatusBadge').textContent = 'READY';
+    }
+
+    function runLiveDemo() {
+      const out = document.getElementById('demoConsoleOutput');
+      const badge = document.getElementById('demoStatusBadge');
+      const sw = softwareList.find(s => s.id === document.getElementById('demoSoftwareSelect').value);
+
+      badge.textContent = 'RUNNING...';
+      out.innerHTML = `<p class="text-indigo-400">[INIT] ${sw.name} क्लाउड सर्वर से कनेक्ट हो रहा है...</p>`;
+
+      const steps = [
+        { delay: 500, text: `[AUTH] एंटी-बैन प्रॉक्सी शील्ड सक्रिय (256-Bit Encrypted)...`, cls: 'text-sky-400' },
+        { delay: 1100, text: `[TASK] ${sw.features[0]} प्रोसेस शुरू किया गया...`, cls: 'text-slate-200' },
+        { delay: 1700, text: `[TASK] ${sw.features[1]} — 100% सफलता दर के साथ चल रहा है...`, cls: 'text-slate-200' },
+        { delay: 2300, text: `[SUCCESS] डेमो टेस्ट सफल! लाइसेंस खरीदने के लिए "सॉफ्टवेयर खरीदें" दबाएं।`, cls: 'text-emerald-400 font-bold' }
+      ];
+
+      steps.forEach((step, idx) => {
+        setTimeout(() => {
+          const p = document.createElement('p');
+          p.className = step.cls;
+          p.textContent = step.text;
+          out.appendChild(p);
+          out.scrollTop = out.scrollHeight;
+          if (idx === steps.length - 1) {
+            badge.textContent = 'COMPLETED ✓';
+          }
+        }, step.delay);
+      });
+    }
+
+    // Custom Request WhatsApp Redirect
+    function sendCustomWhatsApp() {
+      const name = document.getElementById('reqName').value.trim() || 'ग्राहक';
+      const details = document.getElementById('reqDetails').value.trim();
+      if (!details) {
+        alert('कृपया अपनी आवश्यकता या बदलाव का विवरण लिखें।');
+        return;
+      }
+      const msg = `नमस्ते जय हिंद सॉफ्टवेयर!\nमेरा नाम: ${name}\nकस्टम सॉफ्टवेयर / बदलाव रिक्वेस्ट:\n${details}`;
+      window.open(`https://wa.me/919890093797?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+      populateSelectDropdowns();
+      renderSoftwareCards();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
