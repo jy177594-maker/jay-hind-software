@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>जय हिंद सॉफ्टवेयर | Jai Hind Software</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Poppins & Noto Sans Devanagari) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: rgba(30, 41, 59, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 450px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #38bdf8;
+            padding: 3px;
+            background: #0f172a;
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: #38bdf8;
+            color: #0f172a;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            border: 2px solid #0f172a;
+        }
+
+        .brand-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-subtitle {
+            font-size: 14px;
+            color: #38bdf8;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .bio-text {
+            font-size: 14px;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .service-item {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 12px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .service-item i {
+            color: #38bdf8;
+            font-size: 15px;
+        }
+
+        .service-item:hover {
+            border-color: #38bdf8;
+            background: rgba(56, 189, 248, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Action Buttons */
+        .action-links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background: #20bd5a;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #0284c7, #38bdf8);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #f8fafc;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #ffffff;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: #38bdf8;
+            color: #0f172a;
+            transform: translateY(-3px);
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: #64748b;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <!-- Profile Logo / Photo -->
+        <div class="profile-img-container">
+            <!-- अपनी फोटो या लोगो का लिंक नीचे src में डालें -->
+            <img src="https://ui-avatars.com/api/?name=Jai+Hind&background=0284c7&color=fff&size=200&font-size=0.4" alt="जय हिंद सॉफ्टवेयर" class="profile-img">
+            <div class="verified-badge" title="Verified">
+                <i class="fas fa-check"></i>
+            </div>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <h1 class="brand-title">जय हिंद सॉफ्टवेयर</h1>
+        <p class="brand-subtitle">Jai Hind Software Solutions</p>
+
+        <!-- Bio -->
+        <p class="bio-text">
+            आधुनिक वेबसाइट डिज़ाइन, कस्टम सॉफ्टवेयर, वेब पोर्टल और डिजिटल समाधान के लिए आपका विश्वसनीय पार्टनर।
+        </p>
+
+        <!-- Services -->
+        <div class="services-grid">
+            <div class="service-item">
+                <i class="fas fa-laptop-code"></i>
+                <span>वेब डेवलपमेंट</span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-mobile-alt"></i>
+                <span>ऐप / वेब पोर्टल</span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-chart-line"></i>
+                <span>डिजिटल मार्केटिंग</span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-headset"></i>
+                <span>टेक्निकल सपोर्ट</span>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-links">
+            <!-- अपना WhatsApp नंबर 91XXXXXXXXXX की जगह डालें -->
+            <a href="https://wa.me/919999999999?text=नमस्ते%20जय%20हिंद%20सॉफ्टवेयर,%20मुझे%20सॉफ्टवेयर/वेबसाइट%20के%20बारे%20में%20जानकारी%20चाहिए।" target="_blank" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp" style="font-size: 20px;"></i> WhatsApp पर संपर्क करें
+            </a>
+
+            <a href="#portfolio" onclick="showAlert()" class="btn btn-primary">
+                <i class="fas fa-globe"></i> हमारी वेबसाइट देखें
+            </a>
+
+            <button onclick="shareProfile()" class="btn btn-outline">
+                <i class="fas fa-share-alt"></i> प्रोफाइल शेयर करें
+            </button>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-icons">
+            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:contact@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-text">
+            &copy; <span id="year"></span> जय हिंद सॉफ्टवेयर (Jai Hind Software). सर्वाधिकार सुरक्षित।
+        </div>
+    </div>
+
+    <script>
+        // ऑटोमैटिक वर्तमान वर्ष (Year) सेट करने के लिए
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // प्रोफाइल शेयर करने का फंक्शन
+        function shareProfile() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'जय हिंद सॉफ्टवेयर',
+                    text: 'वेब डेवलपमेंट और डिजिटल समाधान के लिए जय हिंद सॉफ्टवेयर से जुड़ें:',
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('प्रोफाइल लिंक कॉपी हो गया है! आप इसे कहीं भी पेस्ट करके शेयर कर सकते हैं।');
+            }
+        }
+
+        // पोर्टफोलियो लिंक के लिए अलर्ट (जब तक आप अपना असली लिंक न डालें)
+        function showAlert() {
+            alert('आप यहाँ अपनी मुख्य वेबसाइट या पोर्टफोलियो का लिंक जोड़ सकते हैं।');
+        }
+    </script>
+</body>
+</html>
