@@ -1244,5 +1244,62 @@ UTR रेफरेंस नंबर  : ${verifiedUtrGlobal}
   }
 </script>
 <!-- PhonePe Direct Payment Button Code End -->
+<!-- Mobile-First View & Laptop Mobile-Frame Code Start -->
+<style>
+  /* 1. मोबाइल और लैपटॉप दोनों पर बॉक्स का साइज सही रखने के लिए */
+  * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  html {
+    background-color: #eef2f6; /* लैपटॉप पर वेबसाइट के बाहर का हल्का बैकग्राउंड */
+  }
+
+  body {
+    width: 100%;
+    max-width: 430px !important; /* असली मोबाइल स्क्रीन की चौड़ाई */
+    min-height: 100vh;
+    margin: 0 auto !important; /* लैपटॉप स्क्रीन के बिल्कुल बीच में रखने के लिए */
+    background-color: #ffffff;
+    overflow-x: hidden !important; /* दाएं-बाएं फालतू स्क्रॉल रोकने के लिए */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.12); /* लैपटॉप पर मोबाइल जैसा बॉर्डर लुक */
+    position: relative;
+  }
+
+  /* 2. मोबाइल स्क्रीन पर सारी फोटो, वीडियो और बटन अपने आप फिट करने के लिए */
+  img, video, iframe, table, input, select, textarea, button {
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  /* 3. छोटे मोबाइल (जैसे iPhone Mini या 360px फोन) पर बटन और टेक्स्ट एडजस्ट करना */
+  @media screen and (max-width: 450px) {
+    html {
+      background-color: #ffffff;
+    }
+    body {
+      max-width: 100% !important;
+      box-shadow: none;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+</style>
+
+<script>
+  // 4. यह स्क्रिप्ट अपने आप मोबाइल स्क्रीन ज़ूम (Viewport) को सेट कर देगी, भले ही <head> में टैग न लगा हो
+  (function() {
+    let viewport = document.querySelector("meta[name=viewport]");
+    if (!viewport) {
+      viewport = document.createElement('meta');
+      viewport.name = "viewport";
+      document.head.appendChild(viewport);
+    }
+    viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
+  })();
+</script>
+<!-- Mobile-First View & Laptop Mobile-Frame Code End -->
+
 
 
