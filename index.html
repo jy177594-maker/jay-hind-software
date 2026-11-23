@@ -1114,3 +1114,55 @@ UTR रेफरेंस नंबर  : ${verifiedUtrGlobal}
   </script>
 </body>
 </html>
+<!-- WhatsApp Share Button Code Start -->
+<style>
+  .whatsapp-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+  }
+
+  .whatsapp-share-btn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-2px);
+  }
+
+  .whatsapp-share-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+  }
+</style>
+
+<button class="whatsapp-share-btn" onclick="shareOnWhatsApp()">
+  <!-- WhatsApp Logo Icon -->
+  <svg viewBox="0 0 32 32">
+    <path d="M16 2.933c-7.213 0-13.067 5.853-13.067 13.067 0 2.307 0.6 4.547 1.747 6.533l-1.853 6.773 6.933-1.813c1.907 1.040 4.067 1.587 6.24 1.587 7.213 0 13.067-5.853 13.067-13.067s-5.853-13.080-13.067-13.080zM22.493 21.48c-0.28 0.787-1.627 1.507-2.253 1.6-0.573 0.080-1.307 0.12-2.107-0.133-0.493-0.16-1.12-0.36-1.92-0.707-3.36-1.453-5.56-4.84-5.733-5.067-0.16-0.227-1.373-1.827-1.373-3.48s0.867-2.467 1.173-2.8c0.307-0.333 0.667-0.413 0.893-0.413s0.44 0.013 0.64 0.013c0.2 0 0.48-0.080 0.747 0.573 0.28 0.667 0.947 2.307 1.027 2.48 0.080 0.16 0.133 0.36 0.027 0.587-0.107 0.227-0.16 0.36-0.32 0.547-0.16 0.187-0.333 0.413-0.48 0.56-0.16 0.16-0.32 0.333-0.133 0.653s0.827 1.36 1.773 2.2c1.213 1.080 2.24 1.413 2.56 1.573 0.32 0.16 0.507 0.133 0.693-0.080s0.8-0.933 1.013-1.253c0.213-0.32 0.427-0.267 0.72-0.16 0.293 0.107 1.853 0.88 2.173 1.040 0.32 0.16 0.533 0.24 0.613 0.373 0.080 0.133 0.080 0.773-0.2 1.56z"/>
+  </svg>
+  Share on WhatsApp
+</button>
+
+<script>
+  function shareOnWhatsApp() {
+    // जो मैसेज व्हाट्सएप पर शेयर होगा उसे यहाँ से बदल सकते हैं
+    const message = "ये शानदार वेबसाइट देखें - जय हिंद सॉफ्टवेयर! 👇\n";
+    const url = window.location.href;
+    const whatsappUrl = "https://api.whatsapp.com/send?text=" + encodeURIComponent(message + url);
+    
+    window.open(whatsappUrl, '_blank');
+  }
+</script>
+<!-- WhatsApp Share Button Code End -->
+
