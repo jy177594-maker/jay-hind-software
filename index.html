@@ -1165,4 +1165,84 @@ UTR रेफरेंस नंबर  : ${verifiedUtrGlobal}
   }
 </script>
 <!-- WhatsApp Share Button Code End -->
+<!-- PhonePe Direct Payment Button Code Start -->
+<style>
+  .phonepe-pay-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #5f259f; /* PhonePe का असली पर्पल रंग */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(95, 37, 159, 0.35);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+
+  .phonepe-pay-btn:hover {
+    background-color: #4a1c7c;
+    transform: translateY(-2px);
+  }
+
+  .phonepe-icon-circle {
+    background-color: #ffffff;
+    color: #5f259f;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 15px;
+  }
+</style>
+
+<button class="phonepe-pay-btn" onclick="payWithPhonePe()">
+  <span class="phonepe-icon-circle">पे</span>
+  Pay with PhonePe
+</button>
+
+<script>
+  function payWithPhonePe() {
+    // 1. यहाँ अपनी असली UPI ID डालें (जैसे: jayhind@ybl या आपका नंबर@ybl)
+    const upiId = "आपकी-UPI-ID@ybl"; 
+    
+    // 2. यहाँ अपना या अपनी कंपनी का नाम लिखें
+    const payeeName = "Jay Hind Software"; 
+    
+    // 3. अगर कोई फिक्स राशि (Amount) रखनी है तो लिखें (जैसे "199"), वरना खाली ("") छोड़ दें ताकि यूज़र खुद राशि डाल सके
+    const amount = ""; 
+    
+    // 4. पेमेंट का नोट/विवरण
+    const note = "Payment for Jay Hind Software";
+
+    // मानक UPI लिंक तैयार करना
+    let upiParams = `pa=${encodeURIComponent(upiId)}&pn=${encodeURIComponent(payeeName)}&tn=${encodeURIComponent(note)}&cu=INR`;
+    if (amount !== "") {
+      upiParams += `&am=${encodeURIComponent(amount)}`;
+    }
+
+    // चेक करें कि यूज़र Android फोन इस्तेमाल कर रहा है या iPhone/अन्य
+    const isAndroid = /Android/i.test(navigator.userAgent);
+
+    if (isAndroid) {
+      // Android पर सीधे PhonePe ऐप (com.phonepe.app) खोलने का Intent लिंक
+      const phonePeIntent = `intent://pay?${upiParams}#Intent;scheme=upi;package=com.phonepe.app;end;`;
+      window.location.href = phonePeIntent;
+    } else {
+      // iPhone या अन्य डिवाइस के लिए डायरेक्ट PhonePe/UPI लिंक
+      window.location.href = `phonepe://pay?${upiParams}`;
+    }
+  }
+</script>
+<!-- PhonePe Direct Payment Button Code End -->
+
 
