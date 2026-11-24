@@ -1512,6 +1512,71 @@ UTR रेफरेंस नंबर  : ${verifiedUtrGlobal}
   <div id="checkoutModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
     <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-md w-full p-6 space-y-4 relative">
       <button onclick="closeCheckoutModal()" class="absol
+<!-- Floating Background Music Toggle Button -->
+<div class="fixed bottom-5 right-5 z-50">
+  <button id="musicToggleBtn" onclick="toggleBgMusic()"
+          class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-slate-900/95 hover:bg-slate-800 text-emerald-400 border border-emerald-500/40 shadow-xl text-xs sm:text-sm font-bold transition-all">
+    <i data-lucide="volume-2" id="musicIcon" class="w-4 h-4"></i>
+    <span id="musicLabel">Music: ON</span>
+  </button>
+</div>
 
+<!-- Background Audio Element -->
+<audio id="bgMusicPlayer" loop preload="auto">
+  <source src="./bg-music.mp3" type="audio/mpeg" />
+</audio>
+
+<script>
+  const bgAudio = document.getElementById('bgMusicPlayer');
+  const musicLabel = document.getElementById('musicLabel');
+  let isMusicEnabled = localStorage.getItem('jhs_music_enabled') !== 'false';
+
+  function updateMusicUI(playing) {
+    if (!musicLabel) return;
+    musicLabel.textContent = playing ? 'Music: ON' : 'Music: OFF';
+  }
+
+  async function tryAutoPlayMusic() {
+    if (!bgAudio || !isMusicEnabled) return;
+    bgAudio.volume = 0.35; // हल्की और संतुलित आवाज़
+    try {
+      await bgAudio.play();
+      updateMusicUI(true);
+    } catch (err) {
+      // ब्राउज़र ने बिना यूजर इंटरैक्शन के ऑटोप्ले रोका है; पहली क्लिक/टच पर चलेगा
+      updateMusicUI(false);
+    }
+  }
+
+  function toggleBgMusic() {
+    if (!bgAudio) return;
+    if (bgAudio.paused) {
+      isMusicEnabled = true;
+      localStorage.setItem('jhs_music_enabled', 'true');
+      bgAudio.play().then(() => updateMusicUI(true)).catch(() => {});
+    } else {
+      isMusicEnabled = false;
+      localStorage.setItem('jhs_music_enabled', 'false');
+      bgAudio.pause();
+      updateMusicUI(false);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    tryAutoPlayMusic();
+    if (window.lucide) lucide.createIcons();
+  });
+
+  // यूजर के पहले क्लिक या टच पर म्यूजिक अपने आप शुरू करने के लिए
+  ['click', 'touchstart', 'keydown'].forEach(evt => {
+    document.addEventListener(evt, function unlockAudioOnce() {
+      if (isMusicEnabled && bgAudio && bgAudio.paused) {
+        bgAudio.play().then(() => updateMusicUI(true)).catch(() => {});
+      }
+      document.removeEventListener(evt, unlockAudioOnce);
+    }, { once: true });
+  });
+</script>
+./bg-music.mp3
 
 
